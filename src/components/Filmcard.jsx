@@ -104,8 +104,10 @@ function Filmcard() {
         <div key={movie.id}className='border rounded-xl shadow-md hover:shadow-xl transition duration-300 p-4   hover:scale-105 transition-transform duration-300
  bg-slate-800 text-white
  flex flex-col  items-center'>
+          
           <img  className=' h-48 object-cover    rounded-lg mb-4 transition duration-300 group-hover:scale-105' src={images[movie.image]} alt="" />
           <h3 className=" text-center  text-lg font-bold text-yellow-400" >{movie.title}</h3>
+       
           <p className=" mb-4  text-gray-400  bg-black/70 text-xs px-2 py-1 rounded-full">Year: {movie.year}</p>
          
           <Link   className='mt-4 inline-block bg-indigo-500 hover:bg-indigo-400 text-white px-5 py-2 rounded-full text-sm transition' to={`/movie/${movie.id}`}>See Details</Link>  

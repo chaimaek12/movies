@@ -122,7 +122,11 @@ const onchangee=()=>{
           alt=""
         />
 <div className="    flex items-center justify-center text-white">
-        <   IoMoon   onClick={onchangee} />
+    
+       <button onClick={onchangee} className={`text-2xl transition-colors duration-500 ${black ? "text-yellow-400" : "text-gray-700"}`}>
+  <IoMoon />
+</button>
+
 </div>
       </div>
     </div>
