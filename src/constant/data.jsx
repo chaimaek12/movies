@@ -1,0 +1,1 @@
+export * as Courses from '../data/courses.json'
