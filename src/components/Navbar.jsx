@@ -33,12 +33,24 @@ import React, { useState, useContext } from "react";
 import { Images } from "../constant";
 import { MovieContext } from "../context/Moviecontext";
 import { Link, useNavigate } from "react-router-dom";
+import { IoMoon } from "react-icons/io5";
 
 const Navbar = () => {
   const { movies = [] } = useContext(MovieContext);
   const [titres, settitres] = useState("");  //dakchy li ktbt finput
   const [results, setResults] = useState([]); //laflam libhal dakchy li ktbt
   const navigate = useNavigate();   //bach nmchy lpage dyal details 
+
+
+  //nbdlo nightmood 
+
+    const[black,setblack]=useState(false) //true dark 
+
+const onchangee=()=>{
+    
+    setblack(!black)  //changement
+}
+
 
   // hna bach itl3o smiyat dyal alflam oanaa kn9lb bhala kitfeltraw 
   const chercher = (e) => {
@@ -56,10 +68,14 @@ const Navbar = () => {
   };
 
 
-
   return (
-    <div className="bg-gray-900 text-gray-600 flex items-center justify-between p-4 relative">
-    
+    //  <div className="bg-gray-900 text-gray-600 flex items-center justify-between p-4 relative   ">
+    <div
+  className={`flex items-center justify-between p-4 relative transition-colors duration-500 ${
+    black ? "bg-gray-800 text-white" : "bg-white text-black"
+  }`}
+>
+
       <div className="flex items-center gap-20">
         <div className="photos">
           <img className="w-10 ml-4" src={Images.mov} alt="" />
@@ -105,6 +121,9 @@ const Navbar = () => {
           src={Images.ptofil}
           alt=""
         />
+<div className="    flex items-center justify-center text-white">
+        <   IoMoon   onClick={onchangee} />
+</div>
       </div>
     </div>
   );
