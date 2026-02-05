@@ -16,7 +16,7 @@ const MovieDetailPage = () => {
   
 
 
-   <div className={`${black ? "bg-gray-800 text-white" : "bg-white text-black"} transition-colors duration-500`}>
+   <div className="bg-gray-800 text-white bg-white text-black ">
       
    
       <Link to="/"className="inline-block mb-6 text-indigo-400 hover:text-indigo-300">  go back </Link>
